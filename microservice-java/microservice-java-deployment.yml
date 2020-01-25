@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-java-deployment
+spec:
+  selector:
+    matchLabels:
+      app: microservice-java
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: microservice-java
+    spec:
+      containers:
+      - name: microservice-java
+        image: 066203203749.dkr.ecr.eu-west-2.amazonaws.com/microservice-java:1.0.0-SNAPSHOT.jar
+        ports:
+        - containerPort: 8080
