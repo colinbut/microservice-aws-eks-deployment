@@ -1,0 +1,8 @@
+---
+- hosts: local
+  tasks:
+  - name: "Create Kubernetes Deployment"
+    shell: "kubectl apply -f microservice-java-deployment.yml"
+
+  - name: "Create Kubernetes Service"
+    shell: "kubectl apply -f microservice-java-service.yml"
