@@ -1,0 +1,8 @@
+---
+- hosts: local
+  tasks:
+  - name: "Delete Kubernetes Service for {{ MICROSERVICE_NAME }}"
+    shell: "kubectl delete service {{ MICROSERVICE_NAME }}-service"
+
+  - name: "Delete Kubernetes Deployment for {{ MICROSERVICE_NAME }}"
+    shell: "kubectl delete deployment {{ MICROSERVICE_NAME }}-deployment"

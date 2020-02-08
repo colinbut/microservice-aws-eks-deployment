@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
     labels:
-        app: microservice-java
-    name: microservice-java
+        app: microservice-java-service
+    name: microservice-java-service
 spec:
   ports:
   - name: http
