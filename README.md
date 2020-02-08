@@ -1,5 +1,9 @@
 # Microservice AWS EKS Deployment
 
+Assumptions:
+
+- kubectl is setup to point to the AWS EKS cluster
+
 ## Ansible
 
 Using Ansible for deployment you just run the ansible-playbook command on the CLI and pass in the nanme of the microservice to deploy as an ansible extra variable:
