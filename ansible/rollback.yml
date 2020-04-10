@@ -2,7 +2,7 @@
 - hosts: local
   tasks:
   - name: "Delete Kubernetes Service for {{ MICROSERVICE_NAME }}"
-    shell: "kubectl delete service {{ MICROSERVICE_NAME }}-service"
+    shell: "export KUBECONFIG=$KUBECONFIG:$HOME/.kube/aws-eks-kubeconfig && kubectl delete service {{ MICROSERVICE_NAME }}-service"
 
   - name: "Delete Kubernetes Deployment for {{ MICROSERVICE_NAME }}"
-    shell: "kubectl delete deployment {{ MICROSERVICE_NAME }}-deployment"
+    shell: "export KUBECONFIG=$KUBECONFIG:$HOME/.kube/aws-eks-kubeconfig && kubectl delete deployment {{ MICROSERVICE_NAME }}-deployment"

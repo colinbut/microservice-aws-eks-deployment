@@ -2,7 +2,7 @@
 - hosts: local
   tasks:
   - name: "Create Kubernetes Deployment for {{ MICROSERVICE_NAME }}"
-    shell: "kubectl apply -f {{ MICROSERVICE_NAME }}-deployment.yml"
+    shell: "export KUBECONFIG=$KUBECONFIG:$HOME/.kube/aws-eks-kubeconfig && kubectl apply -f ../k8s/{{ MICROSERVICE_NAME }}/{{ MICROSERVICE_NAME }}-deployment.yml"
 
   - name: "Create Kubernetes Service for {{ MICROSERVICE_NAME }}"
-    shell: "kubectl apply -f {{ MICROSERVICE_NAME }}-service.yml"
+    shell: "export KUBECONFIG=$KUBECONFIG:$HOME/.kube/aws-eks-kubeconfig && kubectl apply -f ../k8s/{{ MICROSERVICE_NAME }}/{{ MICROSERVICE_NAME }}-service.yml"
