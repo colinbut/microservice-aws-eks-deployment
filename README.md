@@ -26,6 +26,8 @@ Using Ansible for deployment you just run the ansible-playbook command on the CL
 
 navigate to the ansible subfolder first.
 
+#### Deploy
+
 For example, for microservice-java:
 
 ```bash
@@ -36,6 +38,21 @@ or for microservice-nodejs:
 
 ```bash
 ansible-playbook deploy.yml --extra-vars "MICROSERVICE_NAME=microservice-nodejs"
+```
+
+
+#### Rollback
+
+For example, for microservice-java:
+
+```bash
+ansible-playbook rollback.yml --extra-vars "MICROSERVICE_NAME=microservice-java"
+```
+
+or for microservice-nodejs:
+
+```bash
+ansible-playbook rollback.yml --extra-vars "MICROSERVICE_NAME=microservice-nodejs"
 ```
 
 ## Bash
@@ -51,3 +68,9 @@ navigate to bash subfolder and execute the following bash scripts to do either:
 ```bash
 ./rollback.sh
 ```
+
+## Tech
+
+- Ansible
+- Kubernetes
+- Bash
