@@ -61,12 +61,14 @@ navigate to bash subfolder and execute the following bash scripts to do either:
 
 #### Deploy
 ```bash
-./deploy.sh
+./deploy-microservice-java.sh
+./deploy-microservice-nodejs.sh
 ```
 
 #### Rollback
 ```bash
-./rollback.sh
+./rollback-microservice-java.sh
+./rollback-microservice-nodejs.sh
 ```
 
 ## Tech
